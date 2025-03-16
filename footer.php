@@ -164,113 +164,15 @@ $(window).scroll(function() {
 <!-- 独自JS -->
 <!-- アコーディオン -->
 <script>
-$(document).ready(function() {
-  $('.js-accordion').on('click', function() {
-    // 矢印の回転
-    $(this).find('.arrow-button').toggleClass('is-open');
-    $(this).children('.accordion-title').toggleClass('is-open');
+    document.querySelectorAll(".accordionImg").forEach(img => {
+        img.addEventListener("click", function() {
+            let defaultSrc = this.getAttribute("data-default");
+            let altSrc = this.getAttribute("data-alt");
 
-    // スライドトグルで表示・非表示
-    $(this).next('.js-accordion__text').slideToggle(300);
-  });
-});
-</script>
-
-<!-- アコーディオン（FAQ) -->
-<script>
-$(document).ready(function() {
-  $('.js-accordion__title').on('click', function() {
-    $(this).toggleClass('is-open');
-    $(this).next('.js-accordion__content').slideToggle(300);
-  });
-});
-</script>
-
-<!-- スライド -->
-<script>
-// Splide01 自動再生のスライダー
-document.addEventListener('DOMContentLoaded', function() {
-  new Splide('#splide01', {
-    autoplay: true, // 自動再生
-    type: "loop", // ループ
-    pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
-    pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない
-    interval: 3000, // 自動再生の間隔
-    speed: 1000, // スライダーの移動時間
-    padding: "17%", // スライダーの左右の余白
-    gap: 8, // スライド間の余白
-    pagination: false, // ページネーション（ドットナビゲーション）を無効化
-    arrows: false, // ナビゲーション（次/前ボタン）を無効化
-  }).mount(); // new Splide()のインスタンス生成の後に.mount()を呼び出します
-});
-
-// メインとサムネイルのスライダー
-document.addEventListener("DOMContentLoaded", function() {
-  // 各ペアのメインスライダーとサムネイルスライダーを取得
-  document.querySelectorAll('.splide-main').forEach(function(mainElement, index) {
-    // 同じインデックスの .splide-thumbnail を取得
-    const thumbnailElement = document.querySelectorAll('.splide-thumbnail')[index];
-
-    // メインスライダー
-    const main = new Splide(mainElement, {
-      type: "fade", // フェード
-      loop: true, // ループさせる
-      pagination: false, // ページネーション非表示
-      arrows: false, // 矢印非表示
+            // 画像を切り替え
+            this.src = (this.src.includes(defaultSrc)) ? altSrc : defaultSrc;
+        });
     });
-
-    // サムネイルスライダー
-    const thumbnails = new Splide(thumbnailElement, {
-      type: "loop", // スライド
-      pagination: false, // ページネーション非表示
-      arrows: false, // ナビゲーションの矢印を無効化
-      gap: 10, // スライド間の余白
-      padding: "28%", // スライダーの左右の余白
-    });
-
-    // メインとサムネイルを同期
-    main.sync(thumbnails);
-
-    // スライダーをマウント
-    main.mount();
-    thumbnails.mount();
-  });
-});
-
-// Splide06　手動のスライダー
-document.addEventListener('DOMContentLoaded', function() {
-  new Splide('#splide06', {
-    autoplay: false, // 自動再生しない
-    type: "loop", // ループ
-    pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
-    pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない
-    speed: 1000, // スライダーの移動時間
-    padding: "10%", // スライダーの左右の余白
-    gap: 12, // スライド間の余白
-    pagination: false, // ページネーションを無効化
-    arrows: false, // ナビゲーションを無効化
-  }).mount();
-});
-</script>
-
-<!-- 動画のコントロールバー非表示（再生・停止不可） -->
-<script>
-jQuery(function($) {
-  var movie = document.getElementById("bz-video");
-  if (movie) {
-    movie.controls = false; // コントロールバーを非表示にする
-
-    // 動画の再生
-    $('#playButton').on('click', function() {
-      movie.play();
-    });
-
-    // 動画の停止
-    $('#pauseButton').on('click', function() {
-      movie.pause();
-    });
-  }
-});
 </script>
 
 <!-- Safariのみに使用できるクラス -->
