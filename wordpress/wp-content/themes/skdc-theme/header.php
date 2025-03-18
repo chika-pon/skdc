@@ -19,17 +19,20 @@ $description = '';
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" type="image/png">
 
-   <!-- og-image -->
+  <!-- og-image -->
   <!-- 画像の用意がなければ設定しなくてよい -->
-
   <?php
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
-        $host = $_SERVER['HTTP_HOST'];
-        $og_image_url = $protocol . $host . '/assets/img/og-image.jpg';
-        ?>
+  $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+  $host = $_SERVER['HTTP_HOST'];
+
+  // サブディレクトリを含むパスを取得
+  $subdir = str_replace('/index.php', '', dirname($_SERVER['SCRIPT_NAME']));
+
+  $og_image_url = $protocol . $host . $subdir . '/assets/img/og-image.jpg';
+  ?>
   <meta property="og:image" content="<?php echo htmlspecialchars($og_image_url, ENT_QUOTES, 'UTF-8'); ?>">
- 
-  
+
+
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -37,7 +40,7 @@ $description = '';
   <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
   <!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">-->
 
-  <?php wp_head(); ?> 
+  <?php wp_head(); ?>
 </head>
 
 <body>

@@ -1,6 +1,6 @@
 <?php require 'header.php'; ?>
 <div class="bz">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc-bg.png" alt="" class="pc-bg">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc-bg3.png" alt="" class="pc-bg">
   <h2 class="pc-logo__wrapper">
     <a href="#fv">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc-logo.png" alt="" class="pc-logo">
@@ -104,8 +104,8 @@
         </h2>
       </div>
       <div class="bz-16">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/s16.png" alt="年間症例数が151以上の医院のみが取得できる称号で、この称号を取得している医院はたった1％だけです。">
-      </div>
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/s16.jpg" alt="年間症例数が151以上の医院のみが取得できる称号で、この称号を取得している医院はたった1％だけです。">
+              </div>
       <div class="bz-17">
         <h2>
           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/s17.png" alt="当院のマウスピース矯正で叶える、視線を集める堂々とした美しさ">
@@ -241,7 +241,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s46.png" alt="ダイヤモンドプロバイダー認定医院。ダイヤモンドプロバイダーとはインビザライン治療を行う歯科医院の中で、全国で1%しか認定されていない特別なステータスです">
       </div>
       <div class="bz-47">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s47.png" alt="国内TOP1％のみ認定">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s47.jpg" alt="国内TOP1％のみ認定">
       </div>
       <div class="bz-48">
         <h3>
@@ -407,7 +407,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s89.png" alt="スキャンデータを基に歯並びの変化過程や治療後の状態をシミュレーション。抜歯の有無を含む複数の治療プランを確認し、最適な方法を提案。希望者は当日中に精密検査（33,000円、割引あり）も可能。">
       </div>
       <div class="bz-90 cta-exist">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s90.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/s90-2.png" alt="">
         <div class="bz-cta-group bz-cta-group--90">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYQT7sdVaFZIRFAV88Fz8s5N67RFxyZoZth74Dh8f6ZbDx2Q/viewform" class="bz-cta__button01" target="_blank">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cta-button01.png" alt="45分間の無料相談で、最適な矯正治療をご提案します。">

@@ -321,7 +321,7 @@ a {
     position: fixed;
     left: 0;
     top: 0;
-    width: calc(380 / 1680 * 100%);
+    width: calc(396 / 1680 * 100%);
   }
 
   .pc-logo {
@@ -455,6 +455,8 @@ a {
 
   .pc-logo__wrapper {
     display: block;
+    border: 10px solid #fff;
+    border-radius: 0 0 20px;
   }
 }
 
@@ -599,18 +601,23 @@ a {
 .bz-55,
 .bz-57,
 .bz-59,
-.bz-68,
 .bz-70,
 .bz-82,
 .bz-86,
 .bz-90,
+.bz-91,
 .bz-92,
 .bz-93,
 .bz-95 {
   margin-top: -1px;
 }
+
 .bz-57 {
-   margin-top: -0.4px;
+  margin-top: -0.3px;
+}
+
+.bz-68 {
+  margin-top: -0.38px;
 }
 
 .bz-75 {
@@ -626,6 +633,13 @@ a {
 .bz-95 {
   position: relative;
 }
+
+/* .bz-96 {
+  position: sticky;
+  margin-top: -4px;
+  z-index: 2;
+} */
+
 .bz-map iframe {
   position: absolute;
   top: 0;
@@ -634,6 +648,8 @@ a {
   width: 84%;
   height: auto;
   aspect-ratio: 351 / 219;
+  border-radius: 10px;
+  border: 2px solid #fff;
 }
 
 /* 固定ボタン */
