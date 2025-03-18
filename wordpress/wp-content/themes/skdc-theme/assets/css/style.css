@@ -607,7 +607,10 @@ a {
 .bz-92,
 .bz-93,
 .bz-95 {
-  margin-top: -0.8px;
+  margin-top: -1px;
+}
+.bz-57 {
+   margin-top: -0.4px;
 }
 
 .bz-75 {
